@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 crDroid Android Project
+ * Copyright (C) 2017 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,31 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.margaritov.preference.colorpicker;
+
+package com.ethereal.hub.preferences;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.provider.Settings;
+
+import com.android.settings.R;
 
 import com.ethereal.hub.preferences.SystemSettingsStore;
 
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
+public class SystemSettingMasterSwitchPreference extends MasterSwitchPreference {
 
-public class SystemSettingColorPickerPreference extends ColorPickerPreference {
-
-    public SystemSettingColorPickerPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingColorPickerPreference(Context context, AttributeSet attrs) {
+    public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingColorPickerPreference(Context context) {
-        super(context, null);
+    public SystemSettingMasterSwitchPreference(Context context) {
+        super(context);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
+
 }

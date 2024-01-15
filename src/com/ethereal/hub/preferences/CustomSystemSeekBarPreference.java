@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 crDroid Android Project
+ * Copyright (C) 2017 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,30 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.margaritov.preference.colorpicker;
+
+package com.ethereal.hub.preferences;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.provider.Settings;
 
-import com.ethereal.hub.preferences.SystemSettingsStore;
+public class CustomSystemSeekBarPreference extends CustomSeekBarPreference {
 
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
-
-public class SystemSettingColorPickerPreference extends ColorPickerPreference {
-
-    public SystemSettingColorPickerPreference(Context context, AttributeSet attrs, int defStyle) {
+    public CustomSystemSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingColorPickerPreference(Context context, AttributeSet attrs) {
+    public CustomSystemSeekBarPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingColorPickerPreference(Context context) {
+    public CustomSystemSeekBarPreference(Context context) {
         super(context, null);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }

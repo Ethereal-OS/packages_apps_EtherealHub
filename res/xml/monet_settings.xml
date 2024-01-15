@@ -45,7 +45,7 @@
         android:title="@string/bg_color_title"
         android:summary="@string/bg_color_summary" />
 
-    <com.power.hub.preferences.CustomSeekBarPreference
+    <com.ethereal.hub.preferences.CustomSeekBarPreference
         android:key="luminance_factor"
         android:title="@string/luminance_factor_title"
         android:summary="@string/luminance_factor_summary"
@@ -56,7 +56,7 @@
         settings:units="%"
         settings:showSign="true" />
 
-    <com.power.hub.preferences.CustomSeekBarPreference
+    <com.ethereal.hub.preferences.CustomSeekBarPreference
         android:key="chroma_factor"
         android:title="@string/chroma_factor_title"
         android:summary="@string/chroma_factor_summary"

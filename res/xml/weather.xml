@@ -43,14 +43,14 @@
         android:key="lock_screen_weather_category"
         android:title="@string/lock_screen_weather_category_title" >
 
-        <com.power.hub.preferences.SystemSettingSwitchPreference
+        <com.ethereal.hub.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_weather_enabled"
             android:title="@string/lock_screen_show_weather_title"
             android:summaryOn="@string/lock_screen_show_weather_summaryOn"
             android:summaryOff="@string/lock_screen_show_weather_summaryOff"
             android:defaultValue="false" />
 
-        <com.power.hub.preferences.SystemSettingSwitchPreference
+        <com.ethereal.hub.preferences.SystemSettingSwitchPreference
             android:key="lockscreen_weather_style"
             android:title="@string/lock_screen_weather_style_title"
             android:summaryOn="@string/lock_screen_weather_style_summaryOn"

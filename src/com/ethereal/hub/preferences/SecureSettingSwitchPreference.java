@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 crDroid Android Project
+ * Copyright (C) 2017 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,31 +13,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.margaritov.preference.colorpicker;
+
+package com.ethereal.hub.preferences;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.provider.Settings;
 
-import com.ethereal.hub.preferences.SecureSettingsStore;
+import androidx.preference.SwitchPreference;
 
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
+public class SecureSettingSwitchPreference extends SwitchPreference {
 
-public class SecureSettingColorPickerPreference extends ColorPickerPreference {
-
-    public SecureSettingColorPickerPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SecureSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
 
-    public SecureSettingColorPickerPreference(Context context, AttributeSet attrs) {
+    public SecureSettingSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
 
-    public SecureSettingColorPickerPreference(Context context) {
-        super(context, null);
+    public SecureSettingSwitchPreference(Context context) {
+        super(context);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
+    }
+
+    @Override
+    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
+        // This is what default TwoStatePreference implementation is doing without respecting
+        // real default value:
+        //setChecked(restoreValue ? getPersistedBoolean(mChecked)
+        //        : (Boolean) defaultValue);
+        // Instead, we better do
+        setChecked(restoreValue ? getPersistedBoolean((Boolean) defaultValue)
+                : (Boolean) defaultValue);
     }
 }
