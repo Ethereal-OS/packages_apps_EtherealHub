@@ -62,10 +62,10 @@
 
         <!-- Power Menu -->
         <com.ethereal.hub.preferences.etherealhubPreference
-            android:key="etherealmenu__category"
-            android:title="@string/etherealmenu_title"
+            android:key="powermenu__category"
+            android:title="@string/powermenu_title"
             android:fragment="com.ethereal.hub.fragments.PowerMenuSettings"
-            android:icon="@drawable/ic_etherealhub_ethereal_settings"/>
+            android:icon="@drawable/ic_etherealhub_power_settings"/>
 
         <!-- Recents -->
        <!-- <com.ethereal.hub.preferences.etherealhubPreference
