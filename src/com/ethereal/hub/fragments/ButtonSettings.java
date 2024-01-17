@@ -197,7 +197,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.VOLTAGE;
+        return MetricsProto.MetricsEvent.ETHEREAL;
     }
 	
     /**

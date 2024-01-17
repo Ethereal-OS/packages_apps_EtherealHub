@@ -52,6 +52,6 @@ public class SmartPixels extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.VOLTAGE;
+        return MetricsProto.MetricsEvent.ETHEREAL;
     }
 }

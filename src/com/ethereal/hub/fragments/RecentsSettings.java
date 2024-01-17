@@ -53,7 +53,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.VOLTAGE;
+        return MetricsProto.MetricsEvent.ETHEREAL;
     }
 	
 	/**

@@ -47,7 +47,7 @@ public class etherealhub extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.VOLTAGE;
+        return MetricsProto.MetricsEvent.ETHEREAL;
     }
 
     public static void lockCurrentOrientation(Activity activity) {
