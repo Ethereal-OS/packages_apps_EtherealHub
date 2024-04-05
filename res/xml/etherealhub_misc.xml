@@ -40,7 +40,15 @@
             android:key="use_games_spoof"
             android:title="@string/use_games_spoof_title"
             android:summary="@string/use_games_spoof_summary" />
-
+            
+        <!-- Netflix -->
+        <SwitchPreference
+	android:key="persist.sys.pixelprops.netflix"
+	android:icon="@drawable/ic_netflix"
+	android:title="@string/netflix_spoof_title"
+	android:summary="@string/netflix_spoof_summary"
+	android:defaultValue="false" />
+	
     </PreferenceCategory>
 
     <com.ethereal.hub.preferences.SystemSettingSwitchPreference
