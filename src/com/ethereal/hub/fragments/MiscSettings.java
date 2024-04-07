@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) 2023 Ethereal Android Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.ethereal.hub.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -50,7 +65,7 @@ public class MiscSettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_PHOTOS_SPOOF = "use_photos_spoof";
     private static final String KEY_GAMES_SPOOF = "use_games_spoof";
-    private static final String KEY_NETFLIX_SPOOF = "use_netflix_spoof";
+    private static final String KEY_NETFLIX_SPOOF = "use_netflix_spoof";    
 
     private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
@@ -60,8 +75,8 @@ public class MiscSettings extends SettingsPreferenceFragment implements
 
     private SwitchPreference mGamesSpoof;
     private SwitchPreference mPhotosSpoof;
-    private SwitchPreference mNetflixSpoof;
-
+    private SwitchPreference mNetFlixSpoof;
+     
     private Preference mSmartPixels;
 
     @Override
@@ -81,9 +96,9 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         mPhotosSpoof.setChecked(SystemProperties.getBoolean(SYS_PHOTOS_SPOOF, true));
         mPhotosSpoof.setOnPreferenceChangeListener(this);
 
-        mNetflixSpoof = (SwitchPreference) findPreference(KEY_NETFLIX_SPOOF);
-        mNetflixSpoof.setChecked(SystemProperties.getBoolean(SYS_NETFLIX_SPOOF, false));
-        mNetflixSpoof.setOnPreferenceChangeListener(this);
+        mNetFlixSpoof = (SwitchPreference) findPreference(KEY_NETFLIX_SPOOF);
+        mNetFlixSpoof.setChecked(SystemProperties.getBoolean(SYS_NETFLIX_SPOOF, false));
+        mNetFlixSpoof.setOnPreferenceChangeListener(this);             
 		
            mSmartPixels = (Preference) findPreference(SMART_PIXELS);
            boolean mSmartPixelsSupported = getResources().getBoolean(
@@ -103,14 +118,13 @@ public class MiscSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             SystemProperties.set(SYS_PHOTOS_SPOOF, value ? "true" : "false");
             return true;
-        } else if (preference == mNetflixSpoof) {
+        } else if (preference == mNetFlixSpoof) {
             boolean value = (Boolean) newValue;
             SystemProperties.set(SYS_NETFLIX_SPOOF, value ? "true" : "false");
             return true;
         }
         return false;
-    }
-	
+    }	
 
     @Override
     public int getMetricsCategory() {

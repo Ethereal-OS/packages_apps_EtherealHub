@@ -55,6 +55,55 @@
     <string name="enable">Enable</string>
     <string name="disable">Disable</string>
 
+    <!-- Changelog -->
+    <string name="changelog_ethereal_title">Current changelog</string>
+    <string name="changelog_ethereal_summary">View changes in the ROM installed</string>
+    <string name="changelog_ethereal_error">Unable to load changelog</string>
+
+    <!-- About Ethereal -->
+    <string name="about_ethereal">About Ethereal</string>
+    <string name="about_summary">Know about Ehtereal</string>
+    <string name="about_device_name">Device</string>
+
+    <!-- Share Ethereal -->
+    <string name="share_ethereal_title">Share Ethereal</string>
+    <string name="share_ethereal_summary">Let others know about Ethereal</string>
+    <string name="share_message">Check out if #EtherealAndroid is available for your device @ https://ethereal-os.github.io/</string>
+    <string name="share_chooser_title">Share Ethereal</string>
+
+    <!-- Sites Ethereal -->
+    <string name="ethereal_source_title">GitHub</string>
+    <string name="ethereal_source_summary">We love open source, check us out</string>
+    <string name="ethereal_telegram_title">Ethereal Community</string>
+    <string name="ethereal_telegram_summary">We are on telegram. Join us!</string>
+    <string name="ethereal_telegram_channel_title">Updates channel</string>
+    <string name="ethereal_telegram_channel_summary">Get notified of new builds on Telegram</string>
+    <string name="ethereal_website_title">Official website</string>
+    <string name="ethereal_website_summary">Visit our official website</string>
+    <string name="ethereal_translate_title">Translations</string>
+    <string name="ethereal_translate_summary">Help with localisation of ROM in your language!</string>
+    <string name="ethereal_sponsor_title" translatable="false">ScopeHosts</string>
+    <string name="ethereal_sponsor_summary">Visit our website host partner</string>
+    <string name="ethereal_buildserversponsor_title" translatable="false">InterServer</string>
+    <string name="ethereal_buildserversponsor_summary">We recommend their servers if interested in one</string>
+
+    <!-- Donate Ethereal -->
+    <string name="donate_ethereal_title">Support us</string>
+    <string name="donate_ethereal_summary">Donate to support further development</string>
+    <string name="donate_team_title">Ethereal team</string>
+    <string name="donate_team_summary">Donate to support server hosting, site uptime and overall management</string>
+
+    <!-- The Drill -->
+    <string name="drill_title">The drill</string>
+    <string name="drill_summary">Found a bug? Ran into an issue?</string>
+
+    <!-- OTA -->
+    <string name="ethereal_update_title">Updates</string>
+    <string name="ethereal_update_summary">Check and download latest update</string>
+
+    <!-- App details: open play store link if app is user installed -->
+    <string name="app_play_store">Google Play</string>
+
     <!-- Units -->
     <string name="unit_seconds">seconds</string>
     <string name="unit_milliseconds">milliseconds</string>
@@ -77,8 +126,72 @@
     <string name="color_default">Default</string>
     <string name="led_color_green">Green</string>
     <string name="led_color_red">Red</string>
+    
+    <!-- Font style / Icon pack -->
+    <string name="theme_customization_font_title">Font style</string>
+    <string name="theme_customization_font_summary">Set system font style</string>
+    <string name="theme_customization_icon_pack_title">Icon pack</string>
+    <string name="theme_customization_icon_pack_summary">Set custom icon pack style</string>
+    <string name="theme_customization_icon_shape_title">Icon shape</string>
+    <string name="theme_customization_icon_shape_summary">Set system icon shape style</string>
+    <string name="theme_customization_signal_icon_title">Signal icon style</string>
+    <string name="theme_customization_signal_icon_summary">Set custom signal icon style</string>
+    <string name="theme_customization_wifi_icon_title">WiFi icon style</string>
+    <string name="theme_customization_wifi_icon_summary">Set custom wifi icon style</string>
+    <string name="theme_customization_navbar_title">Navbar style</string>
+    <string name="theme_customization_navbar_summary">Set custom navigation bar style</string>
+    <string name="theme_customization_lock_clock_title">Clock font style</string>
+    <string name="theme_customization_lock_clock_summary">Set lockscreen clock font style</string>
+    <string name="theme_customization_brightness_slider_title">Brightness slider style</string>
+    <string name="theme_customization_brightness_slider_summary">Set custom brightness slider style</string>
+    
+    <!-- QS Transparency -->
+    <string name="qs_transparency_title">Background transparency</string>
+    <string name="qs_transparency_summary">Set transparency level for QS background</string>
 
-	<!-- QS settings -->
+    <!-- Data usage info in QS footer -->
+    <string name="qs_footer_datausage_title">Data usage</string>
+    <string name="qs_footer_datausage_summary">Display data usage summary in quick settings footer</string>
+    
+    <!-- Quick setting categories -->
+    <string name="qs_misc_category">Miscellaneous</string>
+    <string name="qs_footer_category">Footer</string>
+
+    <!-- QS Tiles animation  -->
+    <string name="qs_tile_animation_title">Tiles animation</string>
+    <string name="qs_tile_animation_style_title">Animation style</string>
+    <string name="qs_tile_animation_duration_title">Animation duration</string>
+    <string name="qs_tile_animation_interpolator_title">Animation interpolator</string>
+    <string name="qs_tile_animation_style_off">No animation</string>
+    <string name="qs_tile_animation_style_rotate">Rotate</string>
+    <string name="qs_tile_animation_style_flipx">Flip X</string>
+    <string name="qs_tile_animation_style_flipy">Flip Y</string>
+    <string name="qs_tile_animation_interpolator_linearInterpolator">Linear</string>
+    <string name="qs_tile_animation_interpolator_accelerateInterpolator">Accelerate</string>
+    <string name="qs_tile_animation_interpolator_decelerateInterpolator">Decelerate</string>
+    <string name="qs_tile_animation_interpolator_accelerateDecelerateInterpolator">Accelerate decelerate</string>
+    <string name="qs_tile_animation_interpolator_bounceInterpolator">Bounce</string>
+    <string name="qs_tile_animation_interpolator_overshootInterpolator">Overshoot</string>
+    <string name="qs_tile_animation_interpolator_anticipateInterpolator">Anticipate</string>
+    <string name="qs_tile_animation_interpolator_anticipateOvershootInterpolator">Anticipate overshoot</string>
+
+    <!-- Screenshot shutter sound  -->
+    <string name="screenshot_shutter_sound_title">Screenshot sound</string>
+    <string name="screenshot_shutter_sound_summary">Play sound when screenshot is taken</string>
+
+    <!-- QS tiles layout  -->
+    <string name="qs_layout_category_title">Tiles layout</string>
+    <string name="qs_tile_label_hide_title">Hide label</string>
+    <string name="qs_tile_label_size_title">Label text size</string>
+    <string name="qs_tile_label_hide_summary">Only show icon in tile</string>
+    <string name="qs_tile_layout_title">Vertical layout</string>
+    <string name="qs_tile_layout_summary">Show label below icon instead next to icon</string>
+    <string name="qs_columns_portrait_title">Columns (portrait)</string>
+    <string name="qs_columns_landscape_title">Columns (landscape)</string>
+    <string name="qqs_rows_portrait_title">Quick QS Rows (portrait)</string>
+    <string name="qqs_rows_landscape_title">Quick QS Rows (landscape)</string>    
+
+    <!-- QS settings -->
     <string name="qs_title">Quick settings</string>
 
     <!-- Lockscreen shortcuts -->
@@ -107,7 +220,32 @@
     <!-- Power menu Animations  -->
     <string name="power_menu_animation">Power menu</string>
 	
-	<!-- QS header image -->
+    
+    <!-- QS Header -->
+    <string name="qs_header_image_title">Header image</string>
+
+    <!-- Lockscreen Clock -->
+    <string name="kg_custom_clock_top_margin_title">Double-line clock position</string>
+    <string name="kg_small_clock_text_size_title">Small clock size</string>
+    <string name="kg_large_clock_text_size_title">Double-line clock size</string>
+
+    <!-- QS Tiles Style -->
+    <string name="qs_tile_ui_style_title">QS tiles style</string>
+    <string name="qs_tile_ui_style_a11_circle">Circle tiles</string>
+    <string name="qs_tile_ui_style_a11_square">Square tiles</string>
+    <string name="qs_tile_ui_style_a11_mix">Circle &amp; Square tiles</string>
+
+    <!-- QS Panel Style -->
+    <string name="qs_panel_style_title">QS panel style</string>
+    <string name="qs_panel_style_outline">Outline</string>
+    <string name="qs_panel_style_two_tone">Two-Tone accent</string>
+    <string name="qs_panel_style_color_pop">Color pop</string>
+    <string name="qs_panel_style_shaded">Shaded</string>
+    <string name="qs_panel_style_cyberpunk">Cyberpunk</string>
+    <string name="qs_panel_style_neumorph">Neumorph</string>
+    <string name="qs_panel_style_reflected">Reflected</string>
+    <string name="qs_panel_style_surround">Surround</string>
+    <string name="qs_panel_style_thin">ThinLine</string>	
 
     <!-- Lockscreen -->
     <string name="lockscreen_category">Lockscreen</string>
@@ -332,11 +470,6 @@
     <!-- QS date -->
     <string name="qs_date_title">Date</string>
     <string name="qs_date_summary">Display date in quick status bar header</string>
-	
-    <!-- Footer -->
-    <string name="qs_footer_category">QS Footer</string>
-    <string name="qs_footer_datausage_title">Data usage</string>
-    <string name="qs_footer_datausage_summary">Display data usage summary in quick settings footer</string>
 
     <!-- Status bar - Battery -->
     <string name="status_bar_battery_category_title">StatusBar Battery customizations</string>
@@ -478,6 +611,10 @@
     <string name="weather_icon_pack_title">Condition icon pack</string>
     <string name="weather_icon_pack_note">Note\u003a you can install new icon packs from play store by searching for \"Chronus icons\"</string>
 
+    <!-- Netflix Spoof -->
+    <string name="netflix_spoof_title">Netflix spoof</string>
+    <string name="netflix_spoof_summary">Spoof your device as different model for Netflix</string>
+    
     <!-- Lockscreen Weather -->
     <string name="lock_screen_weather_category_title">Lockscreen</string>
     <string name="lock_screen_show_weather_title">Weather display</string>
@@ -581,6 +718,14 @@
     <string name="smart_pixels_percent">Percent of pixels to disable</string>
     <string name="smart_pixels_shift_title">Burn-in protection</string>
     <string name="smart_pixels_shift_summary">Prevents burn-in on OLED devices by shifting pixels every so often</string>
+
+    <!-- Black theme -->
+    <string name="system_black_theme_title">Use black theme</string>
+    <string name="system_black_theme_summary">Force black background colors</string>
+        
+    <!-- Material dismiss all button for notifications -->
+    <string name="notification_material_dismiss_title">Clear all notification button</string>
+    <string name="notification_material_dismiss_summary">Replace clear all notification text with material style floating button</string>
 
     <!-- Fingerprint Ripple Effect -->
     <string name="enable_fingerprint_ripple_effect_title">Ripple effect</string>
