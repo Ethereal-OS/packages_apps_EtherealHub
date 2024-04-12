@@ -40,12 +40,12 @@ public class SecureSettingSwitchPreference extends SwitchPreference {
 
     @Override
     protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        // This is what default TwoStatePreference implementation is doing without respecting
-        // real default value:
-        //setChecked(restoreValue ? getPersistedBoolean(mChecked)
-        //        : (Boolean) defaultValue);
-        // Instead, we better do
-        setChecked(restoreValue ? getPersistedBoolean((Boolean) defaultValue)
-                : (Boolean) defaultValue);
+    if (defaultValue instanceof Boolean) {
+        setChecked(restoreValue ? getPersistedBoolean((Boolean) defaultValue) : (Boolean) defaultValue);
+    } else {
+        // Handle the case where defaultValue is not of type Boolean
+        // For example, you might set a default value here if needed
+        setChecked(false); // Or set some other default value
     }
+  }
 }

@@ -19,12 +19,39 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
+         android:title="@string/qs_misc_category">
+
+        <!-- QS Header Image -->
+        <com.ethereal.hub.preferences.SystemSettingSeekBarPreference
+            android:key="qs_header_image"
+            android:icon="@drawable/ic_header"
+            android:title="@string/qs_header_image_title"
+            android:defaultValue="0"
+            settings:interval="1"
+            android:max="24"
+            android:min="0" />
+
+        <com.ethereal.hub.preferences.SystemSettingSeekBarPreference
+            android:key="qs_transparency"
+            android:icon="@drawable/ic_color_bucket"
+            android:title="@string/qs_transparency_title"
+            android:summary="@string/qs_transparency_summary"
+            android:defaultValue="100"
+            settings:interval="1"
+            settings:units="%"
+            android:max="100"
+            android:min="1" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="quick_settings_brighness_category"
         android:title="@string/qs_brightness_slider_category">
 
         <!-- Brightness slider -->
         <com.ethereal.hub.preferences.SecureSettingListPreference
             android:key="qs_show_brightness_slider"
+            android:icon="@drawable/ic_brightness"
             android:title="@string/qs_show_brightness_slider_title"
             android:entries="@array/qs_show_brightness_slider_entries"
             android:entryValues="@array/qs_show_brightness_slider_values"
@@ -32,13 +59,21 @@
 
         <com.ethereal.hub.preferences.SecureSettingListPreference
             android:key="qs_brightness_slider_position"
+            android:icon="@drawable/ic_brightness"
             android:title="@string/qs_brightness_slider_position_title"
             android:entries="@array/qs_brightness_slider_position_entries"
             android:entryValues="@array/qs_brightness_slider_position_values"
             android:defaultValue="0" />
 
         <com.ethereal.hub.preferences.SecureSettingSwitchPreference
+            android:key="qs_brightness_slider_haptic"
+            android:icon="@drawable/ic_brightness"
+            android:title="@string/qs_brightness_slider_haptic_title"
+            android:summary="@string/qs_brightness_slider_haptic_summary"/>
+
+        <com.ethereal.hub.preferences.SecureSettingSwitchPreference
             android:key="qs_show_auto_brightness"
+            android:icon="@drawable/ic_brightness_auto"
             android:title="@string/qs_show_auto_brightness_title"
             android:summary="@string/qs_show_auto_brightness_summary"
             android:defaultValue="true" />
@@ -59,13 +94,169 @@
             android:dependency="secure_lockscreen_qs_disabled"
             android:defaultValue="true" />
 
-	<PreferenceCategory
-        android:title="@string/qs_footer_category">
+    <PreferenceCategory 
+         android:title="@string/qs_footer_category">
 
-    <com.ethereal.hub.preferences.SystemSettingSwitchPreference 
-        android:key="sys_qs_footer_data_usage"
-        android:title="@string/qs_footer_datausage_title"
-        android:summary="@string/qs_footer_datausage_summary" />
+        <!--<com.ethereal.hub.preferences.SystemSettingSwitchPreference
+            android:key="qs_footer_data_usage"
+            android:icon="@drawable/ic_swap_vertical"
+            android:title="@string/qs_footer_datausage_title"
+            android:summary="@string/qs_footer_datausage_summary" />-->
+
+        <!--<com.ethereal.hub.preferences.SystemSettingSwitchPreference
+            android:key="qs_footer_warnings"
+            android:icon="@drawable/ic_key"
+            android:title="@string/qs_footer_warnings_title"
+            android:summary="@string/qs_footer_warnings_summary"
+            android:defaultValue="true"/>
+
+        <com.ethereal.hub.preferences.SystemSettingSwitchPreference
+            android:key="qs_footer_show_user"
+            android:icon="@drawable/ic_account"
+            android:title="@string/qs_footer_users_icon_title"
+            android:summary="@string/qs_footer_users_icon_summary"
+            android:defaultValue="true" />
+
+        <com.ethereal.hub.preferences.SystemSettingSwitchPreference
+            android:key="qs_footer_show_edit"
+            android:icon="@drawable/ic_pencil"
+            android:title="@string/qs_footer_edit_icon_title"
+            android:defaultValue="true" />
+
+        <com.ethereal.hub.preferences.SystemSettingSwitchPreference
+            android:key="qs_footer_show_power_menu"
+            android:icon="@drawable/ic_power"
+            android:title="@string/qs_footer_show_power_menu_title"
+            android:defaultValue="true" />
+
+        <com.ethereal.hub.preferences.SystemSettingSwitchPreference
+            android:key="qs_footer_show_services"
+            android:icon="@drawable/ic_services"
+            android:title="@string/qs_footer_services_icon_title" />
+
+        <com.ethereal.hub.preferences.SystemSettingSwitchPreference
+            android:key="qs_footer_show_settings"
+            android:icon="@drawable/ic_settings_main"
+            android:title="@string/qs_footer_settings_icon_title"
+            android:defaultValue="true" />-->
+
+        <com.ethereal.hub.preferences.SystemSettingSwitchPreference
+            android:key="notification_material_dismiss"
+            android:icon="@drawable/ic_notification_clear_all"
+            android:title="@string/notification_material_dismiss_title"
+            android:summary="@string/notification_material_dismiss_summary" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="qs_layout_category"
+        android:title="@string/qs_layout_category_title">
+
+        <ListPreference
+            android:key="qs_tile_ui_style"
+            android:icon="@drawable/ic_shapes"
+            android:title="@string/qs_tile_ui_style_title"
+            android:entries="@array/qs_tile_ui_style_entries"
+            android:entryValues="@array/qs_tile_ui_style_values"
+            android:defaultValue="0" />
+
+        <ListPreference
+            android:key="qs_panel_style"
+            android:icon="@drawable/ic_color_bucket"
+            android:title="@string/qs_panel_style_title"
+            android:entries="@array/qs_panel_style_entries"
+            android:entryValues="@array/qs_panel_style_values"
+            android:defaultValue="0" />
+
+        <com.ethereal.hub.preferences.SystemSettingSwitchPreference
+            android:key="qs_tile_label_hide"
+            android:icon="@drawable/ic_text"
+            android:title="@string/qs_tile_label_hide_title"
+            android:summary="@string/qs_tile_label_hide_summary"
+            android:defaultValue="false" />
+
+        <com.ethereal.hub.preferences.SystemSettingSeekBarPreference
+            android:key="qs_tile_label_size"
+            android:icon="@drawable/ic_text"
+            android:title="@string/qs_tile_label_size_title"
+            android:max="15"
+            settings:min="10"
+            settings:interval="1"
+            settings:units="sp"
+            android:defaultValue="14" />
+
+        <com.ethereal.hub.preferences.SystemSettingSwitchPreference
+            android:key="qs_tile_vertical_layout"
+            android:icon="@drawable/ic_qs_tile"
+            android:title="@string/qs_tile_layout_title"
+            android:summary="@string/qs_tile_layout_summary"
+            android:defaultValue="false" />
+
+        <com.ethereal.hub.preferences.SystemSettingSeekBarPreference
+            android:key="qs_layout_columns"
+            android:icon="@drawable/ic_qs_tile"
+            android:title="@string/qs_columns_portrait_title"
+            android:max="5"
+            settings:min="2"
+            settings:interval="1"
+            android:defaultValue="2" />
+
+        <com.ethereal.hub.preferences.SystemSettingSeekBarPreference
+            android:key="qs_layout_columns_landscape"
+            android:icon="@drawable/ic_qs_tile"
+            android:title="@string/qs_columns_landscape_title"
+            android:max="5"
+            settings:min="2"
+            settings:interval="1"
+            android:defaultValue="2" />
+
+        <com.ethereal.hub.preferences.SystemSettingSeekBarPreference
+            android:key="qqs_layout_rows"
+            android:icon="@drawable/ic_qs_tile"
+            android:title="@string/qqs_rows_portrait_title"
+            android:max="3"
+            settings:min="1"
+            settings:interval="1"
+            android:defaultValue="2" />
+
+        <com.ethereal.hub.preferences.SystemSettingSeekBarPreference
+            android:key="qqs_layout_rows_landscape"
+            android:icon="@drawable/ic_qs_tile"
+            android:title="@string/qqs_rows_landscape_title"
+            android:max="3"
+            settings:min="1"
+            settings:interval="1"
+            android:defaultValue="2" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/qs_tile_animation_title">
+
+        <com.ethereal.hub.preferences.SystemSettingListPreference
+            android:key="qs_tile_animation_style"
+            android:icon="@drawable/ic_qs_tile_animation_style"
+            android:title="@string/qs_tile_animation_style_title"
+            android:entries="@array/qs_tile_animation_style_entries"
+            android:entryValues="@array/qs_tile_animation_style_values"
+            android:defaultValue="0" />
+
+        <com.ethereal.hub.preferences.SystemSettingSeekBarPreference
+            android:key="qs_tile_animation_duration"
+            android:icon="@drawable/ic_clock"
+            android:title="@string/qs_tile_animation_duration_title"
+            android:defaultValue="1"
+            settings:interval="1"
+            settings:units="@string/unit_seconds"
+            android:max="5"
+            android:min="1" />
+
+        <com.ethereal.hub.preferences.SystemSettingListPreference
+            android:key="qs_tile_animation_interpolator"
+            android:icon="@drawable/ic_qs_tile_animation_interpolator"
+            android:title="@string/qs_tile_animation_interpolator_title"
+            android:entries="@array/qs_tile_animation_interpolator_entries"
+            android:entryValues="@array/qs_tile_animation_interpolator_values"
+            android:defaultValue="0" />
 
     </PreferenceCategory>
 

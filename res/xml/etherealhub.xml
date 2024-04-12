@@ -46,12 +46,12 @@
             android:icon="@drawable/ic_etherealhub_button_settings"
             android:fragment="com.ethereal.hub.fragments.ButtonSettings"/> 
 			
-		<!-- Animations -
-		<com.ethereal.hub.preferences.etherealhubPreference
+	<!-- Animations -->
+	<com.ethereal.hub.preferences.etherealhubPreference
             android:key="animations_category"
             android:title="@string/animations_title"
             android:icon="@drawable/ic_etherealhub_animation_settings"
-            android:fragment="com.ethereal.hub.fragments.AnimationsSettings"/> -->
+            android:fragment="com.ethereal.hub.fragments.AnimationsSettings"/>
 
         <!-- Lock Screen -->
         <com.ethereal.hub.preferences.etherealhubPreference
@@ -68,11 +68,11 @@
             android:icon="@drawable/ic_etherealhub_power_settings"/>
 
         <!-- Recents -->
-       <!-- <com.ethereal.hub.preferences.etherealhubPreference
+        <com.ethereal.hub.preferences.etherealhubPreference
             android:key="recents_category"
             android:title="@string/recents_title"
             android:fragment="com.ethereal.hub.fragments.RecentsSettings"
-            android:icon="@drawable/ic_etherealhub_recent_settings_background"/> -->
+            android:icon="@drawable/ic_etherealhub_recent_settings_background"/>
 
         <!-- Notifications -->
         <com.ethereal.hub.preferences.etherealhubPreference
@@ -87,8 +87,14 @@
             android:title="@string/misc_title"
             android:fragment="com.ethereal.hub.fragments.MiscSettings"
             android:icon="@drawable/ic_etherealhub_misc_settings"/>
-
-
+            
+	<!-- About Ethereal -->
+        <com.ethereal.hub.preferences.etherealhubPreference
+            android:key="about_category"
+            android:title="@string/about_ethereal"
+            android:fragment="com.ethereal.hub.fragments.About"
+            android:icon="@drawable/ic_etherealhub_about_settings"/>	
+	
         <!-- Device Part -->
         <Preference
             android:key="device_part"
