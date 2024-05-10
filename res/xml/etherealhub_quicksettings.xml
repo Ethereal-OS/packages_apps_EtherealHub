@@ -180,10 +180,10 @@
             android:icon="@drawable/ic_text"
             android:title="@string/qs_tile_label_size_title"
             android:max="15"
-            settings:min="10"
+            settings:min="5"
             settings:interval="1"
             settings:units="sp"
-            android:defaultValue="14" />
+            android:defaultValue="10" />
 
         <com.ethereal.hub.preferences.SystemSettingSwitchPreference
             android:key="qs_tile_vertical_layout"
