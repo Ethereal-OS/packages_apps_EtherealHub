@@ -54,7 +54,12 @@
     <string name="none_string">None</string>
     <string name="enable">Enable</string>
     <string name="disable">Disable</string>
-
+    
+    <string name="category_system_title">System</string>
+    
+    <!-- Footer alerts -->
+    <string name="animations_transparent_alert">Some (or maybe all) of this animations may not work if your device got a transparent theme!</string>
+    
     <!-- Changelog -->
     <string name="changelog_ethereal_title">Current changelog</string>
     <string name="changelog_ethereal_summary">View changes in the ROM installed</string>
