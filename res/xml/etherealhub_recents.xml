@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2023 EtherealOS
-
+<!--
+     Copyright (C) 2017 Atomic-OS Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -13,9 +13,27 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen
+<PreferenceScreen 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/recents_title"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/recents_category">
+
+    <PreferenceCategory
+        android:key="stock_recents"
+        android:title="@string/ethereal_recents_title">
+
+    <com.ethereal.hub.preferences.SystemSettingSwitchPreference 
+         android:key="systemui_recents_mem_display"
+         android:title="@string/recents_show_membar_title"
+         android:summary="@string/recents_show_membar_summary"
+         android:defaultValue="false" />
+
+        <com.ethereal.hub.preferences.SystemSettingSwitchPreference
+            android:key="wallpaper_recents_tint"
+            android:title="@string/wallpaper_tint_recents"
+            android:summary="@string/wallpaper_tint_summary"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
