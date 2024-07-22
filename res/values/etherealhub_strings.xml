@@ -31,7 +31,8 @@
     <string name="theme_summary">System theme, rounded, switch theme</string>
     <string name="quicksettings_title">Quick Settings</string>
     <string name="quicksettings_summary">Tile layout, blur</string>
-    <string name="recents_title">Recents apps</string>
+    <string name="recents_title">Recents</string>
+    <string name="recents_category">Recent Panel</string>
     <string name="recents_summary">Slim recents</string>
     <string name="statusbar_title">Status bar</string>
     <string name="statusbar_summary">Clock, carrier, status icons</string>
@@ -56,62 +57,10 @@
     <string name="disable">Disable</string>
     
     <string name="category_system_title">System</string>
+    <string name="ethereal_recents_title">Recent Customization</string>
     
     <!-- Footer alerts -->
     <string name="animations_transparent_alert">Some (or maybe all) of this animations may not work if your device got a transparent theme!</string>
-    
-    <!-- Changelog -->
-    <string name="changelog_ethereal_title">Current changelog</string>
-    <string name="changelog_ethereal_summary">View changes in the ROM installed</string>
-    <string name="changelog_ethereal_error">Unable to load changelog</string>
-
-    <!-- About Ethereal -->
-    <string name="about_ethereal">About Ethereal</string>
-    <string name="about_summary">Know about Ehtereal</string>
-    <string name="about_device_name">Device</string>
-
-    <!-- Share Ethereal -->
-    <string name="share_ethereal_title">Share Ethereal</string>
-    <string name="share_ethereal_summary">Let others know about Ethereal</string>
-    <string name="share_message">Check out if #EtherealAndroid is available for your device @ https://ethereal-os.github.io/</string>
-    <string name="share_chooser_title">Share Ethereal</string>
-
-    <!-- Sites Ethereal -->
-    <string name="ethereal_source_title">GitHub</string>
-    <string name="ethereal_source_summary">We love open source, check us out</string>
-    <string name="ethereal_telegram_title">Ethereal Community</string>
-    <string name="ethereal_telegram_summary">We are on telegram. Join us!</string>
-    <string name="ethereal_telegram_channel_title">Updates channel</string>
-    <string name="ethereal_telegram_channel_summary">Get notified of new builds on Telegram</string>
-    <string name="ethereal_website_title">Official website</string>
-    <string name="ethereal_website_summary">Visit our official website</string>
-    <string name="ethereal_translate_title">Translations</string>
-    <string name="ethereal_translate_summary">Help with localisation of ROM in your language!</string>
-    <string name="ethereal_sponsor_title" translatable="false">ScopeHosts</string>
-    <string name="ethereal_sponsor_summary">Visit our website host partner</string>
-    <string name="ethereal_buildserversponsor_title" translatable="false">InterServer</string>
-    <string name="ethereal_buildserversponsor_summary">We recommend their servers if interested in one</string>
-
-    <!-- Donate Ethereal -->
-    <string name="donate_ethereal_title">Support us</string>
-    <string name="donate_ethereal_summary">Donate to support further development</string>
-    <string name="donate_team_title">Ethereal team</string>
-    <string name="donate_team_summary">Donate to support server hosting, site uptime and overall management</string>
-
-    <!-- The Drill -->
-    <string name="drill_title">The drill</string>
-    <string name="drill_summary">Found a bug? Ran into an issue?</string>
-
-    <!-- OTA -->
-    <string name="ethereal_update_title">Updates</string>
-    <string name="ethereal_update_summary">Check and download latest update</string>
-
-    <!-- App details: open play store link if app is user installed -->
-    <string name="app_play_store">Google Play</string>
-
-    <!-- Brightness slider haptic feedback -->
-    <string name="qs_brightness_slider_haptic_title">Haptic feedback</string>
-    <string name="qs_brightness_slider_haptic_summary">Provide haptic feedback on changing brightness using slider</string>
 
     <!-- Changelog -->
     <string name="changelog_ethereal_title">Current changelog</string>
@@ -383,6 +332,17 @@
     <string name="network_traffic_units_megabytes">Megabytes per second (MB/s)</string>
     <string name="network_traffic_hidearrow">Hide arrows</string>
     <string name="network_traffic_hidearrow_summary">Hide the network traffic indicator arrows</string>
+
+    <!-- Recent Memory Bar -->
+    <string name="recents_show_membar_title">Memory bar</string>
+    <string name="recents_show_membar_summary">Show a bar with the device\'s available memory</string>
+
+    <!-- Wallpaper tint -->
+    <string name="wallpaper_tint_power_menu">Power menu background tint</string>
+    <string name="wallpaper_tint_recents">Recents background tint</string>
+    <string name="wallpaper_tint_keyguard">Lockscreen background tint</string>
+    <string name="wallpaper_tint_notification_shade">Notification shade tint</string>
+    <string name="wallpaper_tint_summary">Apply a tint to the background based on the homescreen wallpaper</string>
 
     <!-- Fingerprint authentication vibration -->
     <string name="fingerprint_category">Fingerprint</string>
