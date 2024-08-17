@@ -89,22 +89,29 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         final ContentResolver resolver = getActivity().getContentResolver();
 
         mGamesSpoof = (SwitchPreference) findPreference(KEY_GAMES_SPOOF);
-        mGamesSpoof.setChecked(SystemProperties.getBoolean(SYS_GAMES_SPOOF, false));
-        mGamesSpoof.setOnPreferenceChangeListener(this);
+        if (mGamesSpoof != null) {
+            mGamesSpoof.setChecked(SystemProperties.getBoolean(SYS_GAMES_SPOOF, false));
+            mGamesSpoof.setOnPreferenceChangeListener(this);
+        }
 
         mPhotosSpoof = (SwitchPreference) findPreference(KEY_PHOTOS_SPOOF);
-        mPhotosSpoof.setChecked(SystemProperties.getBoolean(SYS_PHOTOS_SPOOF, true));
-        mPhotosSpoof.setOnPreferenceChangeListener(this);
+        if (mPhotosSpoof != null) {
+            mPhotosSpoof.setChecked(SystemProperties.getBoolean(SYS_PHOTOS_SPOOF, true));
+            mPhotosSpoof.setOnPreferenceChangeListener(this);
+        }
 
         mNetFlixSpoof = (SwitchPreference) findPreference(KEY_NETFLIX_SPOOF);
-        mNetFlixSpoof.setChecked(SystemProperties.getBoolean(SYS_NETFLIX_SPOOF, false));
-        mNetFlixSpoof.setOnPreferenceChangeListener(this);             
-		
-           mSmartPixels = (Preference) findPreference(SMART_PIXELS);
-           boolean mSmartPixelsSupported = getResources().getBoolean(
-                 com.android.internal.R.bool.config_supportSmartPixels);
-           if (!mSmartPixelsSupported)
-                 prefSet.removePreference(mSmartPixels);
+        if (mNetFlixSpoof != null) {
+            mNetFlixSpoof.setChecked(SystemProperties.getBoolean(SYS_NETFLIX_SPOOF, false));
+            mNetFlixSpoof.setOnPreferenceChangeListener(this);
+        }
+
+        mSmartPixels = (Preference) findPreference(SMART_PIXELS);
+        boolean mSmartPixelsSupported = getResources().getBoolean(
+            com.android.internal.R.bool.config_supportSmartPixels);
+        if (!mSmartPixelsSupported && mSmartPixels != null) {
+            prefSet.removePreference(mSmartPixels);
+        }
     }
 
     @Override
@@ -124,29 +131,30 @@ public class MiscSettings extends SettingsPreferenceFragment implements
             return true;
         }
         return false;
-    }	
+    }   
 
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.ETHEREAL;
     }
-	
-	/**
+
+    /**
      * For Search.
      */
-
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.etherealhub_misc) {
-                @Override
-                public List<String> getNonIndexableKeys(Context context) {
-                    List<String> keys = super.getNonIndexableKeys(context);
+        new BaseSearchIndexProvider(R.xml.etherealhub_misc) {
+            @Override
+            public List<String> getNonIndexableKeys(Context context) {
+                List<String> keys = super.getNonIndexableKeys(context);
 
-                    boolean mSmartPixelsSupported = context.getResources().getBoolean(
-                            com.android.internal.R.bool.config_supportSmartPixels);
-                    if (!mSmartPixelsSupported)
-                        keys.add(SMART_PIXELS);
-
-                    return keys;
+                boolean mSmartPixelsSupported = context.getResources().getBoolean(
+                    com.android.internal.R.bool.config_supportSmartPixels);
+                if (!mSmartPixelsSupported) {
+                    keys.add(SMART_PIXELS);
                 }
+
+                return keys;
+            }
     };
 }
+
