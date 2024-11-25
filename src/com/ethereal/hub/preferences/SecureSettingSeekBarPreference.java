@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 crDroid Android Project
+ * Copyright (C) 2017 AOSPEXTENDED PROJECT
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,29 +13,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.margaritov.preference.colorpicker;
+package com.ethereal.hub.preferences;
 
 import android.content.Context;
-import android.text.TextUtils;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.provider.Settings;
 
-import com.ethereal.hub.preferences.SecureSettingsStore;
+public class SecureSettingSeekBarPreference extends CustomSeekBarPreference {
 
-public class SecureSettingColorPickerPreference extends ColorPickerPreference {
+    public SecureSettingSeekBarPreference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
+    }
 
-    public SecureSettingColorPickerPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SecureSettingSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
 
-    public SecureSettingColorPickerPreference(Context context, AttributeSet attrs) {
+    public SecureSettingSeekBarPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
 
-    public SecureSettingColorPickerPreference(Context context) {
+    public SecureSettingSeekBarPreference(Context context) {
         super(context, null);
         setPreferenceDataStore(new SecureSettingsStore(context.getContentResolver()));
     }
+
+    @Override
+    protected Object onGetDefaultValue(TypedArray ta, int index) {
+        return super.onGetDefaultValue(ta, index);
+    }
 }
+
+

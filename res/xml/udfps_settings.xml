@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2024 VoltageOS
+     Copyright (C) 2024 Ethereal OS
      SPDX-License-Identifier: Apache-2.0
 -->
 <PreferenceScreen 
@@ -9,7 +9,7 @@
     android:title="@string/udfps_category">
 
     <!-- Screen Off UDFPS -->
-    <com.power.hub.preferences.SecureSettingSwitchPreference
+    <com.ethereal.hub.preferences.SecureSettingSwitchPreference
         android:key="screen_off_udfps_enabled"
         android:title="@string/screen_off_udfps_title"
         android:summary="@string/screen_off_udfps_summary"
@@ -20,12 +20,12 @@
         android:key="udfps_icon_picker"
         android:title="@string/udfps_icon_picker_title"
         android:summary="@string/udfps_icon_picker_summary"
-        android:fragment="com.power.hub.fragments.lockscreen.UdfpsIconPicker" />
+        android:fragment="com.ethereal.hub.fragments.lockscreen.UdfpsIconPicker" />
 
     <!-- UDFPS ANIMATIONS -->
     <Preference
         android:key="udfps_recognizing_animation_preview"
         android:title="@string/udfps_recog_animation_effect_title"
         android:summary="@string/udfps_recog_animation_effect_summary"
-        android:fragment="com.power.hub.fragments.lockscreen.UdfpsAnimation" />
+        android:fragment="com.ethereal.hub.fragments.lockscreen.UdfpsAnimation" />
 </PreferenceScreen>
