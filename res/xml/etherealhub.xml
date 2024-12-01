@@ -90,6 +90,12 @@
             android:fragment="com.ethereal.hub.fragments.MiscSettings"
             android:icon="@drawable/ic_etherealhub_misc_settings"/>
 
+	<!-- About Ethereal -->
+        <com.ethereal.hub.preferences.etherealhubPreference
+            android:key="about_category"
+            android:title="@string/about_ethereal"
+            android:fragment="com.ethereal.hub.fragments.About"
+            android:icon="@drawable/ic_etherealhub_about_settings"/>	
 
         <!-- Device Part -->
         <Preference
